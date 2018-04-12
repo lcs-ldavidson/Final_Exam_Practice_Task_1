@@ -26,14 +26,54 @@ let canvas = Canvas(width: 400, height: 600)
 
 // Begin your solution here...
 
-// REMINDER: here's how to create a square with a fill
-canvas.fillColor = Color(hue: 56, saturation: 7, brightness: 56, alpha: 100)
-canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 50, height: 50)
+canvas.fillColor = Color.init(hue: 191, saturation: 100, brightness: 81, alpha: 100)
 
-// REMINDER: here's how to create text in a certain location
-canvas.drawText(message: "blur", size: 96, x: 100, y: 150, kerning: 0)
-// HINT: You can use the kerning property to change the distance between letters
-//       Try adjusting the value to positive or negative values. What happens?
+canvas.drawRectangle(centreX: 200, centreY: 300, width: 400, height: 600)
+
+//blur
+
+canvas.drawText(message: "blur", size: 205, x: 10, y: 300, kerning: -5)
+
+//bluuuurrrrr
+
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 17)
+
+for blury in stride(from: 324, to: -60, by: -8) {
+    
+
+
+canvas.drawText(message: "blur", size: 205, x: 10, y: blury, kerning: -5)
+
+}
+
+//other text
+
+canvas.textColor = Color.init(hue: 0, saturation: 0, brightness: 0, alpha: 100)
+
+canvas.drawText(message: "saturday", size: 10, x: 22, y: 550, kerning: -0.5)
+
+canvas.drawText(message: "october 16 1993 / 8 pm", size: 10, x: 22, y: 540, kerning: -0.5)
+
+
+canvas.drawText(message: "mandela hall", size: 10, x: 143, y: 550, kerning: -0.5)
+
+canvas.drawText(message: "at university of sussex", size: 10, x: 143, y: 540, kerning: -0.5)
+
+
+
+
+
+
+
+
+//// REMINDER: here's how to create a square with a fill
+//canvas.fillColor = Color(hue: 56, saturation: 7, brightness: 56, alpha: 100)
+//canvas.drawRectangle(bottomLeftX: 0, bottomLeftY: 0, width: 50, height: 50)
+//
+//// REMINDER: here's how to create text in a certain location
+//canvas.drawText(message: "blur", size: 96, x: 100, y: 150, kerning: 0)
+//// HINT: You can use the kerning property to change the distance between letters
+////       Try adjusting the value to positive or negative values. What happens?
 
 /*:
  **Remember to commit and push your work,please**.
